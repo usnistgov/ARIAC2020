@@ -513,7 +513,7 @@ void VacuumGripperPlugin::OnUpdate()
         gzdbg << "dropAttachedModel and attachedObjType are different: " << objectType << " and "
               << this->dataPtr->attachedObjType << std::endl;
         continue;
-      } 
+      }
 
       auto objPose = this->dataPtr->dropAttachedModel->WorldPose();
       ignition::math::Pose3d dropFramePose;

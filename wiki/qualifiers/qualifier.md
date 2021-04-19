@@ -4,7 +4,7 @@ Wiki | [Home](../../README.md) | [Documentation](../documentation/documentation.
 
 # Wiki | Qualifiers
 
-- There is a single qualification round for ARIAC 2020, with top teams being chosen to participate in the Finals.
+- There is a single qualification round for ARIAC 2021, with top teams being chosen to participate in the Finals.
 - Qualifier submissions will be evaluated following the [automated evaluation procedure](../documentation/automated_evaluation.md).
 
 # Overview
