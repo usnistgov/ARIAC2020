@@ -4,7 +4,7 @@
     <static>false</static>
     <link name="link">
       <inertial>
-        <pose>0 0 0.01 0 0 0</pose>
+        <pose>0.01 0.015 0.008 0 0 0</pose>
         <mass>0.5</mass>
         <inertia>
           <ixx>0.0009</ixx>
@@ -12,15 +12,15 @@
           <ixz>0</ixz>
           <iyy>0.0009</iyy>
           <iyz>0</iyz>
-          <izz>0.0012</izz>
+          <izz>0.0009</izz>
         </inertia>
       </inertial>
       <collision name='collision'>
         <pose frame=''>0 0 0 0 0 0</pose>
         <geometry>
             <mesh>
-            <uri>model://assembly_regulator_blue_ariac/meshes/assembly_regulator_part_blue.dae</uri>
-            <scale>0.85 0.85 0.95</scale>
+            <uri>model://assembly_regulator_blue_ariac/meshes/assembly_regulator_collision.stl</uri>
+            <scale>0.95 0.95 0.95</scale>
             </mesh>
           </geometry>
         <surface>

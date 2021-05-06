@@ -20,7 +20,7 @@ options:
   insert_models_over_bins: true
   insert_models_over_shelves: true
   belt_population_cycles: 10
-  gazebo_state_logging: true
+  # gazebo_state_logging: true
 time_limit: 500
 
 #location of each agv and products on agvs when the simulation starts
@@ -80,7 +80,7 @@ models_over_bins:
 
 belt_models:
   assembly_battery_green:
-    10.0:
+    3.0:
       pose:
         xyz: [0.0, 4.3, 0.92]
         rpy: [0, 0, 0]
