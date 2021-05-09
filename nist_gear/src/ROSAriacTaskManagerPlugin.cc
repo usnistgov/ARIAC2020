@@ -397,6 +397,8 @@ void ROSAriacTaskManagerPlugin::Load(physics::WorldPtr _world,
   if (_sdf->HasElement("population_activate_topic"))
     populationActivateTopic = _sdf->Get<std::string>("population_activate_topic");
 
+  gzdbg << "population active topic: " << populationActivateTopic << "/n";
+
   std::string ordersTopic = "orders";
   if (_sdf->HasElement("orders_topic"))
     ordersTopic = _sdf->Get<std::string>("orders_topic");
@@ -1072,6 +1074,7 @@ void ROSAriacTaskManagerPlugin::Load(physics::WorldPtr _world,
       this->dataPtr->rosnode->createTimer(ros::Duration(0.1),
                                           &ROSAriacTaskManagerPlugin::PublishStatus, this);
 
+  // Gazebo topic publisher for belt population
   this->dataPtr->populatePub =
       this->dataPtr->node->Advertise<msgs::GzString>(populationActivateTopic);
 
@@ -2199,6 +2202,7 @@ void ROSAriacTaskManagerPlugin::SetAGVLocation(std::string agv_frame, std::strin
 /////////////////////////////////////////////////
 void ROSAriacTaskManagerPlugin::EnableConveyorBeltControl()
 {
+  gzdbg << "Enabling conveyor belt" << "\n";
   if (!this->dataPtr->conveyorControlClient.exists())
   {
     ROS_ERROR_STREAM("[ARIAC TaskManager] conveyor belt control service does not exist");

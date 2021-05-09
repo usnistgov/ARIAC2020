@@ -14,7 +14,6 @@
 
 options:
   insert_models_over_bins: true
-  insert_models_over_shelves: true
   belt_population_cycles: 0
   gazebo_state_logging: true
 time_limit: -1
